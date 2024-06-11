@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F1 About</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="@Url.Action("Index", "Home")" class="logo">
+            <img src="~/img/f1.png" alt="F1 Logo" class="logo-image">
+            <b>F1 Championship</b>
+        </a>
+        <div class="header-right">
+            <a class="active" href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("Teams", "Home")">Teams</a>
+            <a href="@Url.Action("Drivers", "Home")">Drivers</a>
+            <a href="@Url.Action("Leagues", "Home")">Team Leagues</a>
+            <a href="@Url.Action("Dashboards", "Home")">Dashboards</a>
+            <a href="@Url.Action("About", "Home")">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>About Me</h1>
+
+        <div class="team-container">
+            <div class="team-member">
+                <img src="~/img/Thanuja.png" alt="Person 1">
+                <h4>Thanuja Uppuluri</h4>
+                <p>MS - Computer Science</p>
+                <h4>Project Contribution</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/thanujauppuluri/" target="_blank"><img src="~/img/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/thanuja507" target="_blank"><img src="~/img/github.png" alt="GitHub"></a>
+                    <a href="mailto:thanuja.uppuluri@gmail.com" target="_blank"><img src="~/img/outlook.png" alt="Outlook"></a>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <h1>Data Model</h1><br>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="~/img/erd.png" style="max-width: 100%; max-height: 100%; height: auto; width: auto;">
+        </div>
+        <br>
+        <div>
+            <div> <a href="https://github.com/thanuja507" target="_blank"><h1>Project Github Link</h1></a> </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>© @DateTime.Now.Year F1 Cars. All rights reserved.</p>
+    </footer>
+
+</body>
+
+
+</html>

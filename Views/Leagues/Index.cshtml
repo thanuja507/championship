@@ -1,0 +1,62 @@
+﻿@model IEnumerable<F1Championship.Models.Leagues>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <title>F1 Teams Leagues</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+</head>
+<div class="header1">
+    <h1>Teams League Data</h1>
+    <p style="display: inline-block; margin-left: 10px;">
+        <b><a asp-controller="Leagues" asp-action="Create" class="fancy-button">Create New</a></b>
+    </p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                League Number
+            </th>
+            <th>
+                Team Number
+            </th>
+            <th>
+                Team
+            </th>
+            <th>
+                League
+            </th>
+            <th>
+                Data Changes
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.League)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="fancy-button">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="fancy-data-button">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="fancy-delete-button">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

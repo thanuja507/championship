@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - F1 Championship</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+    <link rel="stylesheet" href="~/F1Championship.styles.css" asp-append-version="true" /> 
+    <link href="~/css/site.css" rel="stylesheet" /> 
+</head>
+<body>
+    <div class="header">
+        <a href="@Url.Action("Index", "Home")" class="logo">
+            <img src="~/img/f1.png" alt="F1 Logo" class="logo-image">
+            <b>F1 Championship</b>
+        </a>
+        <div class="header-right">
+            <a class="active" href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("Teams", "Home")">Teams</a>
+            <a href="@Url.Action("Drivers", "Home")">Drivers</a>
+            <a href="@Url.Action("Leagues", "Home")">Team Leagues</a>
+            <a href="@Url.Action("Dashboards", "Home")">Dashboards</a>
+            <a href="@Url.Action("About", "Home")">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

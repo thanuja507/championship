@@ -1,0 +1,64 @@
+﻿@model F1Championship.Models.Teams
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+    <title>F1 Details</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+</head>
+<h1>Team Details</h1>
+
+<div>
+    <h4>Teams</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Team Number
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            Team Name
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamName)
+        </dd>
+        <dt class = "col-sm-2">
+            Headquarters
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Headquarters)
+        </dd>
+        <dt class = "col-sm-2">
+            Team Principal
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamPrincipal)
+        </dd>
+        <dt class = "col-sm-2">
+            Chassis
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Chassis)
+        </dd>
+        <dt class = "col-sm-2">
+            Engine
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Engine)
+        </dd>
+        <dt class = "col-sm-2">
+            Drivers
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Drivers)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="fancy-button">Edit</a> |
+    <a asp-action="Index" class="fancy-data-button">Back to List</a>
+</div>

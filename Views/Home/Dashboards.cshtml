@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F1 Website Dashboards</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+    <style>
+        canvas {
+            width: 100%; 
+            height: auto; 
+            max-width: 800px; 
+            margin: 20px auto; 
+            display: block;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="@Url.Action("Index", "Home")" class="logo">
+            <img src="~/img/f1.png" alt="F1 Logo" class="logo-image">
+            <b>F1 Championship</b>
+        </a>
+        <div class="header-right">
+            <a class="active" href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("Teams", "Home")">Teams</a>
+            <a href="@Url.Action("Drivers", "Home")">Drivers</a>
+            <a href="@Url.Action("Leagues", "Home")">Team Leagues</a>
+            <a href="@Url.Action("Dashboards", "Home")">Dashboards</a>
+            <a href="@Url.Action("About", "Home")">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header1">
+            <h1>F1 Website Dashboards</h1>
+        </div>
+
+        <canvas id="myChart"></canvas>
+        <canvas id="constructorChart"></canvas>
+        <canvas id="fastestLapChart"></canvas>
+        <script src="~/js/charts.js"></script>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>© @DateTime.Now.Year F1 Cars. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

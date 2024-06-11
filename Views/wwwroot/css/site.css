@@ -1,0 +1,873 @@
+/* Global styles */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #005bb5;
+        text-decoration: underline;
+    }
+
+/* Header styles */
+.header {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+    .header a {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+        .header a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+.header-right {
+    display: flex;
+}
+
+/* Navigation styles */
+.navbar {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #0073e6;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+    .navbar a {
+        color: #333;
+        padding: 10px 20px;
+    }
+
+        .navbar a:hover {
+            border-bottom: 2px solid #0073e6;
+        }
+
+/* Container styles */
+.container {
+    padding: 20px;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+    .section h2 {
+        color: #000;
+        font-size: 28px;
+    }
+
+    .section p {
+        line-height: 1.5;
+    }
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Team styles */
+.team {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .team img {
+        width: 150px;
+        height: 100px;
+        border-radius: 4px;
+        margin-right: 20px;
+    }
+
+.team-info h3 {
+    color: #0073e6;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 20px; /* Spacing between columns */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header, .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .header a, .navbar a {
+            padding: 10px 0;
+        }
+
+    .header-right {
+        display: none;
+    }
+
+    .team {
+        flex-direction: column;
+    }
+
+        .team img {
+            margin-bottom: 10px;
+        }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 20px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-image: url('images/hero-bg.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+/* News Section */
+.news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news li {
+    margin-bottom: 10px;
+}
+
+    .news li a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+        .news li a:hover {
+            color: #0073e6;
+        }
+
+/* Upcoming Races Section */
+.upcoming-races ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Driver Profiles Section */
+.driver-profiles .card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+    .driver-profiles .card:hover {
+        transform: scale(1.02);
+    }
+
+    .driver-profiles .card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+/* Remove dots (bullet points) before the driver profiles */
+.driver-profiles ul {
+    list-style-type: none; /* Removes the dots */
+    padding: 0; /* Remove padding if necessary */
+}
+
+.driver-profiles .card h3 {
+    color: #0073e6;
+    margin-bottom: 5px;
+}
+
+/* Car Specifications Section */
+.car-specs ul {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style for fancy buttons */
+.fancy-button, .fancy-delete-button, .fancy-data-button {
+    padding: 5px 10px;
+    margin: 0px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+    .fancy-button:hover {
+        background-color: #45a049;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+.fancy-data-button {
+    background-color: orange;
+    color: white;
+}
+
+    .fancy-data-button:hover {
+        background-color: darkorange;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+
+.fancy-delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+    .fancy-delete-button:hover {
+        background-color: #d32f2f;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+    .footer .social-links {
+        margin-bottom: 10px;
+    }
+
+        .footer .social-links a {
+            color: #fff;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+
+            .footer .social-links a:hover {
+                color: #0073e6;
+            }
+
+/* Driver Profiles */
+.driver-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .driver-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.driver-details {
+    font-size: 14px;
+}
+
+/* Slider styles */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Slider navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+/* Global styles */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+    .header a {
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border-radius: 4px;
+    }
+
+        .header a:hover {
+            background-color: #333;
+        }
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+    .header1 a {
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border-radius: 4px;
+    }
+
+        .header1 a:hover {
+            background-color: forestgreen;
+        }
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+    .header2 a {
+        color: #000;
+        padding: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border-radius: 4px;
+    }
+
+        .header2 a:hover {
+            background-color: red;
+        }
+
+/* Hero Section */
+.hero {
+    background-color: #000; /* Black background */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 0.1px;
+    text-align: center;
+    position: relative;
+}
+
+
+    /* Hero text */
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 1px;
+        position: relative;
+    }
+
+    .hero p {
+        font-size: 24px;
+        z-index: 1;
+        position: relative;
+    }
+
+
+/* News Section */
+.section h2 {
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* News Section */
+.news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+    .news li a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+        .news li a:hover {
+            color: #0073e6;
+        }
+
+    .news li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+/* Upcoming Races Section */
+.upcoming-races ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.upcoming-races li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+    .upcoming-races li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header,
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .header a,
+        .navbar a {
+            padding: 10px 0;
+        }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #0073e6;
+    }
+
+button {
+    padding: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #005bb5;
+    }
+
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* CSS */
+.logo-image {
+    height: 30px; /* Adjust the height to your preference */
+    margin-right: 10px; /* Add some space between the logo and the text */
+    vertical-align: middle; /* Align the image with the text */
+}
+
+
+/* Style for the races grid */
+.races-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Style for each race item */
+.race-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    /* Style for the images in each race item */
+    .race-item img {
+        width: 200px; /* Set the desired width */
+        height: 100px; /* Set the desired height */
+        object-fit: cover; /* This ensures the image covers the area while maintaining aspect ratio */
+    }
+
+/* Style for the driver profiles section */
+.section.driver-profiles {
+    margin-bottom: 20px;
+}
+
+    /* Style for the driver grid */
+    .section.driver-profiles .driver-grid {
+        display: flex; /* Use flexbox to align items horizontally */
+        justify-content: space-around; /* Space out the items evenly */
+        flex-wrap: wrap; /* Wrap items to next row if needed */
+    }
+
+    /* Style for each driver item */
+    .section.driver-profiles .driver-item {
+        text-align: center; /* Center the text */
+        margin: 10px; /* Add margin around each driver item */
+    }
+
+    /* Style for the driver images */
+    .section.driver-profiles img {
+        width: 150px; /* Set the desired width */
+        height: 150px; /* Set the desired height */
+        border-radius: 50%; /* Make the images round */
+        margin-bottom: 10px; /* Add space below the images */
+    }
+
+/* Style for the car specifications section */
+.section.car-specs {
+    margin-bottom: 20px;
+}
+
+    /* Style for the specification grid */
+    .section.car-specs .spec-grid {
+        display: flex; /* Use flexbox to align items in a grid */
+        flex-wrap: wrap; /* Wrap items to the next row if needed */
+        gap: 20px; /* Add spacing between grid items */
+    }
+
+    /* Style for each specification item */
+    .section.car-specs .spec-item {
+        flex: 1 1 calc(33% - 20px); /* Distribute space evenly across the grid */
+        background-color: #f9f9f9; /* Light background for each item */
+        padding: 10px; /* Add padding for better readability */
+        border-radius: 8px; /* Rounded corners for a modern look */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+        /* Style for specification titles */
+        .section.car-specs .spec-item strong {
+            display: block; /* Display the title as a block */
+            margin-bottom: 5px; /* Add margin below the title */
+            color: #333; /* Darker color for the title */
+            font-weight: bold; /* Make the title bold */
+        }
+
+/* CSS for the paragraph */
+.f1-description {
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    font-size: 15.75px; /* Adjust font size */
+    line-height: 2; /* Adjust line height for better readability */
+    text-align: justify; /* Justify the text */
+    margin: 20px; /* Add margin around the paragraph */
+    padding: 10px; /* Add padding for separation */
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Dark text color */
+}
+
+.section.news {
+    padding: 0px;
+}
+
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+    .news-item:hover {
+        transform: translateY(-5px);
+    }
+
+.news-image {
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 10px;
+}
+
+    .news-content a {
+        font-weight: bold;
+        color: #0073e6;
+        text-decoration: none;
+    }
+
+    .news-content p {
+        font-size: 14px;
+        color: #555;
+        margin-top: 5px;
+    }
+
+/* Popup Form */
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 70%; /* Increase the width of the popup form */
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+}
+
+.popup-content .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Popup Form */
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 70%; /* Adjust the width as needed */
+}
+
+.hidden {
+    display: none;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+}
+
+.popup-content .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+/* Add your CSS styles here */
+.team-container {
+    display: flex;
+    justify-content: center; /* Change to 'center' or 'flex-start' */
+    margin-top: 20px;
+    gap: 200px; /* Add this property to control spacing between items */
+}
+
+.team-member {
+    text-align: center;
+}
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+.table th {
+    color: black; /* Change the color to black */
+}
+/* Style for social media icons */
+.social-icons {
+    margin-top: 5px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Align items horizontally */
+}
+
+    .social-icons a {
+        margin-right: 2%; /* Adjust the margin between icons */
+    }
+
+        .social-icons a img {
+            width: auto; /* Allow the width to adjust based on the height */
+            height: 40px; /* Adjust the height of the icons */
+            transition: opacity 0.3s ease; /* Add transition effect */
+        }
+
+            .social-icons a img:hover {
+                opacity: 1; /* Change opacity on hover */
+            }
+
+    /* Adjust the size of LinkedIn icon */
+    .social-icons .linkedin img {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Adjust the size of GitHub icon */
+    .social-icons .github img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .social-icons .outlook img {
+        width: 15px;
+        height: 15px;
+    }

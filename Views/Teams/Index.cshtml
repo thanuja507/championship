@@ -1,0 +1,78 @@
+﻿@model IEnumerable<F1Championship.Models.Teams>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <title>F1 Teams</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+</head>
+<div class="header1">
+    <h1>Teams Data</h1>
+    <p style="display: inline-block; margin-left: 10px;">
+        <b><a asp-controller="Teams" asp-action="Create" class="fancy-button">Create New</a></b>
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Team Number
+            </th>
+            <th>
+                Team Name
+            </th>
+            <th>
+                Headquartes
+            </th>
+            <th>
+                Team Principle
+            </th>
+            <th>
+                Chassis
+            </th>
+            <th>
+                Engine
+            </th>
+            <th>
+                Drivers
+            </th>
+            <th>
+                Data Changes
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headquarters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamPrincipal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chassis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Engine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drivers)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="fancy-button">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="fancy-data-button">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="fancy-delete-button">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

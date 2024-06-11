@@ -1,0 +1,42 @@
+﻿@model F1Championship.Models.Leagues
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Leagues</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            League Number
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            Team Number
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TeamId)
+        </dd>
+        <dt class = "col-sm-2">
+            Team
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+        <dt class = "col-sm-2">
+            League
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.League)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="fancy-button">Edit</a> |
+    <a asp-action="Index" class="fancy-data-button">Back to List</a>
+</div>

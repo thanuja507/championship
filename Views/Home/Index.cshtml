@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Home</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico.png" />
+    <script src="~/js/site.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="@Url.Action("Index", "Home")" class="logo">
+            <img src="~/img/f1.png" alt="F1 Logo" class="logo-image">
+            <b>F1 Championship</b>
+        </a>
+        <div class="header-right">
+            <a class="active" href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("Teams", "Home")">Teams</a>
+            <a href="@Url.Action("Drivers", "Home")">Drivers</a>
+            <a href="@Url.Action("Leagues", "Home")">Team Leagues</a>
+            <a href="@Url.Action("Dashboards", "Home")">Dashboards</a>
+            <a  href="@Url.Action("About", "Home")">About</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <h1>Welcome to F1 Championship</h1>
+        <p>Your ultimate source for all Formula 1 actions. Stay updated with the latest news, race schedules, and more!</p>
+    </section>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide" style="background-image: url('@Url.Content("~/img/f15.png")');"></div>
+            <div class="slide" style="background-image: url('@Url.Content("~/img/f13.png")');"></div>
+            <div class="slide" style="background-image: url('@Url.Content("~/img/f11.png")');"></div>
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </div>
+    <p class="f1-description">
+        Formula One, commonly known as Formula 1 or F1, is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile (FIA). The FIA Formula One World Championship has been one of the world's premier forms of racing since its inaugural running in 1950. The word formula in the name refers to the set of rules all participants' cars must follow. A Formula One season consists of a series of races, known as Grands Prix. Grands Prix take place in multiple countries and continents on either purpose-built circuits or closed public roads.
+    </p>
+    <main class="container">
+        <section class="section news">
+            <h2>Latest News</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <img src="~/img/impact.png" alt="Monaco GP" class="news-image">
+                    <div class="news-content">
+                        <a href="#">Race results: The latest from Australia</a>
+                        <p>The Australian Grand Prix was an exciting race with unexpected turns and intense competition.</p>
+                    </div>
+                </li>
+                <li class="news-item">
+                    <img src="~/img/news.png" alt="Team updates" class="news-image">
+                    <div class="news-content">
+                        <a href="#">Team updates: New driver announcements</a>
+                        <p>Several teams have announced new drivers for the upcoming races, bringing fresh talent to the track.</p>
+                    </div>
+                </li>
+                <li class="news-item">
+                    <img src="~/img/news1.png" alt="Technical innovations" class="news-image">
+                    <div class="news-content">
+                        <a href="#">Technical innovations: New aerodynamics</a>
+                        <p>Teams are introducing new aerodynamics to improve speed and performance in the upcoming races.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="section upcoming-races">
+            <h2>Upcoming Races</h2>
+            <div class="races-grid">
+                <div class="race-item">
+                    <img src="~/img/monaco.png" alt="Monaco GP"><br>
+                    <strong>May 29:</strong> Monaco Grand Prix
+                </div>
+                <div class="race-item">
+                    <img src="~/img/canada.png" alt="Canadian GP"><br>
+                    <strong>June 12:</strong> Canadian Grand Prix
+                </div>
+                <div class="race-item">
+                    <img src="~/img/france.png" alt="French GP"><br>
+                    <strong>June 26:</strong> French Grand Prix
+                </div>
+                <div class="race-item">
+                    <img src="~/img/germany.png" alt="German GP"><br>
+                    <strong>July 3:</strong> German Grand Prix
+                </div>
+                <div class="race-item">
+                    <img src="~/img/britain.png" alt="British GP"><br>
+                    <strong>July 10:</strong> British Grand Prix
+                </div>
+                <div class="race-item">
+                    <img src="~/img/hungary.png" alt="Hungarian GP"><br>
+                    <strong>July 24:</strong> Hungarian Grand Prix
+                </div>
+            </div>
+        </section>
+        <section class="section driver-profiles">
+            <h2>Driver Profiles</h2>
+            <p>Get to know your favorite drivers.</p>
+            <div class="races-grid">
+                <div class="driver-info">
+                    <img src="~/img/max.png" alt="Max Verstappen">
+                    <div class="driver-details">
+                        <strong>Max Verstappen:</strong> Current world champion.
+                    </div>
+                </div>
+                <div class="driver-info">
+                    <img src="~/img/lewis.png" alt="Lewis Hamilton">
+                    <div class="driver-details">
+                        <strong>Lewis Hamilton:</strong> Seven-time world champion.
+                    </div>
+                </div>
+                <div class="driver-info">
+                    <img src="~/img/charles.png" alt="Charles Leclerc">
+                    <div class="driver-details">
+                        <strong>Charles Leclerc:</strong> Young star from Ferrari.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section car-specs">
+            <h2>Car Specifications</h2>
+            <p>Discover the latest advancements in Formula 1 car technology, built for speed and precision on the track.</p>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <strong>Engine:</strong>
+                    <p>Turbocharged V6 hybrid - A powerful engine that combines internal combustion with electric power for optimal performance.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Power:</strong>
+                    <p>Over 900 horsepower - Achieved through advanced engineering and hybrid technology.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Weight:</strong>
+                    <p>Approximately 750 kg - Lightweight construction for improved speed and handling.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Dimensions:</strong>
+                    <p>5.6m x 2.0m x 1.0m - Compact and aerodynamic design to optimize speed and maneuverability.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Top Speed:</strong>
+                    <p>Over 350 km/h - Exceptional speed achieved through advanced aerodynamics and engineering.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Transmission:</strong>
+                    <p>Eight-speed semi-automatic - Ensures precise gear changes and optimal power delivery.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Braking System:</strong>
+                    <p>Advanced carbon ceramic brakes - Provides superior stopping power and heat resistance.</p>
+                </div>
+                <div class="spec-item">
+                    <strong>Aerodynamics:</strong>
+                    <p>Advanced aero packages - Designed for minimal drag and increased downforce, crucial for high-speed cornering.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>© @DateTime.Now.Year F1 Cars. All rights reserved.</p>
+    </footer>
+</body>
+</html>
